@@ -24,29 +24,26 @@ Route::get('/tambah', function () {
   $mahasiswa -> save ();
 }); 
 Route::get('/ubah', function () {
-  $mahasiswa = Mahasiswa::find(1);
+  $mahasiswa = Mahasiswa::find(2);
   $mahasiswa -> nama ="wahyu";
   $mahasiswa -> nim ="13111099";
-  $mahasiswa -> alamat ="jln bandung jakarta";
+  $mahasiswa -> alamat ="jln bandung bolanggg";
   $mahasiswa -> save ();
 }); 
 Route::get('/tampil', function () {
   $mahasiswa = Mahasiswa::all();
   foreach ($mahasiswa as $mhs) {
-  	echo "<b>Nama</b> :";
+  	echo "<br><b>Nama</b> :";
   	echo $mhs->nama;
-  	echo "<b>NIM</b> :";
+  	echo "<br><b>NIM</b> :";
   	echo $mhs->nim;
-  	echo "<b>Alamat</b> :";
+  	echo "<br><b>Alamat</b> :";
   	echo $mhs->alamat;
   }
 }); 
 Route::get('/hapus', function () {
   $mahasiswa = Mahasiswa::find(1);
-  $mahasiswa -> nama ="wahyu";
-  $mahasiswa -> nim ="13111099";
-  $mahasiswa -> alamat ="jln bandung jakarta";
-  $mahasiswa -> save ();
+  $mahasiswa -> delete ();
 }); 
 
 
